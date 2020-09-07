@@ -1,0 +1,64 @@
+.header {
+  background-color: $color-header-primary;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 0 1.5rem;
+  }
+  
+  
+  &__logo {
+    color: $color-logo-primary;
+    padding: 2rem 0;
+    font-size: 3.9rem;
+    text-decoration: none;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 3rem;
+    }
+    
+  }
+  
+  &__nav > ul {
+    display: flex;
+    list-style: none;
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  &__nav > ul li:not(:last-child) {
+      margin-right: 9rem;
+    
+      @media only screen and (max-width: $bp-largest) {
+        margin-right: 5rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin-right: 3rem;
+      }
+
+      
+    }
+  
+  &__nav-link:active,
+  &__nav-link:visited,
+  &__nav-link:link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  &__nav-link:hover {
+    color: $color-logo-primary;
+  }
+}

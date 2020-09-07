@@ -1,0 +1,99 @@
+.projects {
+  padding: 8rem 0;
+  
+  
+  .project-tile {
+    margin-top: 4rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 0 5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1.5rem;
+    }
+    
+    .container {
+      flex-direction: column;
+    }
+    
+  }
+  
+  .project {
+    
+    background-color: $color-welcome-primary;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0,0,0, .3);
+    
+    &__img-box {
+      position: relative;
+      overflow: hidden;
+      
+      & > img {
+        transform: scale(1);
+        transition: transform .3s;
+        width: 100%;
+        
+      }
+    }
+    
+    &:hover .project__img-box > img {
+      transform: scale(1.3);
+      filter: blur(5px);
+    }
+    
+    
+    
+    &__cta-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba($color-logo-primary, .8), rgba($color-logo-primary, .8));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scaley(0);
+      transition: transform .3s;
+    }
+    
+    &__cta {
+      color: #fff;
+      font-size: 2.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem 3rem;
+      border: 2px solid #fff;
+      font-weight: bold;
+      
+      &:hover {
+        background: $color-welcome-primary;
+        border-color: $color-welcome-primary;
+      }
+    }
+    
+    &__icon {
+      font-size: 2.5rem;
+    }
+    
+    &:hover .project__cta-box{
+      transform: scaley(1);
+    }   
+    
+  }
+  
+  .project-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3.2rem;
+    display: inline-block;
+    
+    padding: 1rem 0;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2.2rem;
+    }
+  }
+}

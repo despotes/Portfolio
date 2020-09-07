@@ -1,0 +1,22 @@
+.footer {
+  background-color: $color-welcome-primary;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  &__logo:link,
+  &__logo:visited,
+  &__logo:active {
+    color: $color-logo-primary;
+    text-decoration: none;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__copyrights {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}

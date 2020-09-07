@@ -1,0 +1,98 @@
+.welcome {
+  height: 100vh;
+  background-color: $color-welcome-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+  @media only screen and (max-width: $bp-medium) {
+    height: 100vh;
+  }
+  
+  &__box > *{
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  
+  &__heading-primary {
+    font-size: 8rem;
+    
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 6rem;
+      }
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 5rem;
+      }
+  }
+  
+  &__heading-secondary {
+    font-size: 6rem;
+    
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 4rem;
+        padding: 0 5rem;
+      }
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 3rem;
+      }
+  }
+  
+  &__job {
+    font-size: 3.7rem;
+    text-transform: uppercase;
+    margin-top: 11rem;
+    letter-spacing: 1.5px;
+    
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 3rem;
+      }
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+        margin-top: 8rem;
+      }
+  }
+  
+  &__hidden-box {
+    margin-bottom: auto;
+  }
+  
+  &__cta {
+    display: block;
+    margin-top: auto;
+    color: #fff;
+    font-size: 2.3rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color .5s;
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+        margin-bottom: 8rem;
+      }
+    
+    & > i {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+      transform: translatey(0);
+      animation: bouncing 2s 1s infinite;
+    }
+    
+    &:hover {
+      color: $color-logo-primary;
+      
+      & > i {
+        animation-play-state: paused;
+      }
+    }
+    
+  }
+  
+}

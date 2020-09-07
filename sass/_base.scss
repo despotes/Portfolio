@@ -1,0 +1,77 @@
+// VARIABLES //
+$color-header-primary: #1E292D;
+$color-logo-primary: #EB4960;
+$color-welcome-primary: #27363B;
+$color-contact-primary: #375C68;
+
+// MEDIA QUERIES VARIABLES
+$bp-largest: 83.5625em; //1337px
+$bp-large: 75em; // 1200px
+$bp-medium-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-medium-small: 43.75em; // 700px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; //500px
+
+// LAYOUT VARIABLES
+$gutter-vertical : 6rem;
+$gutter-horizontal: 6rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  height: 100%;
+}
+
+// UTILITY
+
+/* animations */
+@keyframes bouncing {
+  0% { transform: translatey(0);}
+  50% { transform: translatey(1rem);}
+  85% { transform: translatey(0);}
+  95% { transform: translatey(1rem);}
+  100% { transform: translateY(0);}
+}
+
+
+.text-color-logo-primary {
+  color: $color-logo-primary;
+}
+
+.text-color-welcome-primary {
+  color: $color-welcome-primary;
+}
+
+.text-color-white {
+  color: #fff;
+}
+
+
+
+/**************************/
+/****** TYPOGRAPHY *******/
+/************************/
+
+.heading-primary {
+  font-size: 5rem;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 4rem;
+  }
+}
